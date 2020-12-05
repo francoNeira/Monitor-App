@@ -86,7 +86,7 @@ class Monitor {
     let changedServices = { activated: [], disabled: [] };
     Object.keys(servicesStatus).forEach(service => {
       let currentStatus = servicesStatus[service];
-      if (currentStatus === this._servicesStatus[service])
+      if (currentStatus !== this._servicesStatus[service])
         currentStatus === 'active'
           ? changedServices.activated.push(service)
           : changedServices.disabled.push(service);
@@ -97,7 +97,7 @@ class Monitor {
   _statusHasChanged(servicesStatus) {
     try {
       return Object.keys(servicesStatus).some(
-        service => servicesStatus[service] === this._servicesStatus[service]
+        service => servicesStatus[service] !== this._servicesStatus[service]
       );
     } catch (error) {}
   }
