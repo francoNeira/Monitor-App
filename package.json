@@ -1,0 +1,28 @@
+{
+  "name": "monitor-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "chai": "^4.1.2",
+    "express": "^4.17.1",
+    "picklify": "github:lwoites/picklify",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.10.0",
+    "mocha": "^5.0.5"
+  },
+  "scripts": {
+    "test": "mocha",
+    "eslint": "node_modules/.bin/eslint *.js",
+    "load": "node resources/files/loadData.js",
+    "api": "node src/apirest/api.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

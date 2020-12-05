@@ -1,0 +1,16 @@
+{
+  "services": [
+    {
+      "service": "unqfy",
+      "url": "localhost:9000"
+    },
+    {
+      "service": "newsletter",
+      "url": "localhost:9001"
+    },
+    {
+      "service": "logging",
+      "url": "localhost:9002"
+    }
+  ]
+}
